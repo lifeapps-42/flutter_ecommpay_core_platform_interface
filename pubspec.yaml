@@ -1,7 +1,6 @@
 name: flutter_ecommpay_core_platform_interface
 description: A new Flutter plugin project.
 version: 0.0.1
-homepage:
 
 environment:
   sdk: '>=2.19.6 <3.0.0'

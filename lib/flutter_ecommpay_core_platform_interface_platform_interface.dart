@@ -1,24 +1,19 @@
 import 'package:plugin_platform_interface/plugin_platform_interface.dart';
 
-import 'flutter_ecommpay_core_platform_interface_method_channel.dart';
-
-abstract class FlutterEcommpayCorePlatformInterfacePlatform extends PlatformInterface {
+class FlutterEcommpayCorePlatform extends PlatformInterface {
   /// Constructs a FlutterEcommpayCorePlatformInterfacePlatform.
-  FlutterEcommpayCorePlatformInterfacePlatform() : super(token: _token);
+  FlutterEcommpayCorePlatform() : super(token: _token);
 
   static final Object _token = Object();
 
-  static FlutterEcommpayCorePlatformInterfacePlatform _instance = MethodChannelFlutterEcommpayCorePlatformInterface();
+  static FlutterEcommpayCorePlatform _instance = FlutterEcommpayCorePlatform();
 
-  /// The default instance of [FlutterEcommpayCorePlatformInterfacePlatform] to use.
-  ///
-  /// Defaults to [MethodChannelFlutterEcommpayCorePlatformInterface].
-  static FlutterEcommpayCorePlatformInterfacePlatform get instance => _instance;
+  static FlutterEcommpayCorePlatform get instance => _instance;
 
   /// Platform-specific implementations should set this with their own
-  /// platform-specific class that extends [FlutterEcommpayCorePlatformInterfacePlatform] when
+  /// platform-specific class that extends [FlutterEcommpayCorePlatform] when
   /// they register themselves.
-  static set instance(FlutterEcommpayCorePlatformInterfacePlatform instance) {
+  static set instance(FlutterEcommpayCorePlatform instance) {
     PlatformInterface.verifyToken(instance, _token);
     _instance = instance;
   }
